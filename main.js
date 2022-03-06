@@ -46,21 +46,21 @@ image(video, 0,0,600,500);
 
 fill("red");
 stroke("red")
+
+circle(leftWristX,leftWristY,20);
+circle(rightWristX,rightWristY,20);
 }
 
 function play(){
-if(leftWristY > 0){    
-circle(leftWristX,leftWristY,20);    
+if(leftWristY > 0 && leftWristY <= 500){        
 song2.stop();
 song1.play();
-document.getElementById("Song_Name").innerHTML = "Beerus"
+document.getElementById("Song_Name").innerHTML = "Beerus";
 }
-
-if(rightWristY > 0){
-circle(rightWristX,rightWristY,20);    
+else if(rightWristY > 0 && rightWristY <= 500){ 
 song1.stop();
 song2.play();  
-document.getElementById("Song_Name").innerHTML = "Obito"  
+document.getElementById("Song_Name").innerHTML = "Obito";  
 }
 }
   
